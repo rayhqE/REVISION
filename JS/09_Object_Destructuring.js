@@ -8,11 +8,9 @@ const repo = {
 
 const { repoCommits, repoName, repoOwner } = repo;
 
-
 console.log(repoCommits);
 console.log(repoName);
 // console.log(cum);
-
 
 //+++++++++++API FORMAT++++++++++++++++++
 // {
@@ -23,9 +21,4 @@ console.log(repoName);
 //   "isEmployed":false
 // }
 
-
-[
-  {},
-  {},
-  {}
-]
+[{}, {}, {}];
