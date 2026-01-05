@@ -29,3 +29,34 @@ document.getElementById("addNewItem").addEventListener("click", () => {
 document.getElementById("removeLastTask").addEventListener("click", () => {
   document.getElementById("taskList").lastElementChild.remove();
 });
+
+//EXAMPLE 6
+document.getElementById("clickMeButton").addEventListener("dblclick", () => {
+  alert("Button Clicked");
+});
+
+//EXAMPLE 7
+document.getElementById("teaList").addEventListener("click", (e) => {
+  if (e.target && e.target.matches(".teaItem")) {
+    e.target.classList.add("highlight");
+  }
+});
+//EXAMPLE 8
+document.querySelector("#feedbackForm").addEventListener("submit", (e) => {
+  e.preventDefault();
+  let feedBack = document.getElementById("feedbackInput").value;
+  document.getElementById(
+    "feedbackDisplay"
+  ).textContent = `Feedback is: ${feedBack}`;
+  document.getElementById("feedbackDisplay").classList = "highlight";
+});
+
+//EXAMPLE 9
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("domStatus").textContent = "DOM Fully Loaded";
+});
+
+//EXAMPLE 10
+document.getElementById("toggleHighlight").addEventListener("click", () => {
+  document.getElementById("descriptionText").classList.toggle("highlight");
+});
