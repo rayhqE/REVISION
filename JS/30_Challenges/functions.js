@@ -15,14 +15,14 @@ Call `confirmOrder` from within `orderTea` and return the result.
 */
 
 function orderTea(teaType) {
-  function confirmOrder(teaType) {
+  function confirmOrder() {
     return `Order confirmed for ${teaType}`;
   }
-  return confirmOrder(teaType);
+  return confirmOrder();
 }
 
-let orderConfirmation = orderTea("chai");
-// console.log(orderConfirmation);
+let orderConfirmation = orderTea("green tea");
+console.log(orderConfirmation);
 
 /* 
 3. Write an arrow function named `calculateTotal` that takes two parameters: `price` and `quantity`. The function should return the total cost by multiplying the `price` and `quantity`. 
