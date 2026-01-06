@@ -68,15 +68,76 @@
 // console.log(priceTotal);
 
 /*Write a function findLongestWord(arr) that takes an array of strings and returns the longest word using reduce() and an arrow function*/
-const arr = ["rayyan", "cat", "home", "safetyFirst"];
-const findLongestWord = (arr) => {
-  return arr.reduce((acc, item) => acc + Math.max(item[i]));
-};
+// const arr = ["rayyan", "cat", "home", "safetyFirst"];
+// const findLongestWord = (arr) => {
+//   return arr.reduce((acc, item) => acc + Math.max(item[i]));
+// };
 
-function outer() {
-  function inner() {
-    return `Inner function called`;
-  }
-  return inner();
+// function outer() {
+//   function inner() {
+//     return `Inner function called`;
+//   }
+//   return inner();
+// }
+// console.log(outer());
+
+// const fetchData = () => {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       // resolve("DATA Fetched Succesfully");
+//       reject("Error fetching Data");
+//     }, 3000);
+//   });
+// };
+// fetchData()
+//   .then((data) => {
+//     // return (data = "121 Data");
+//     return data.toLowerCase();
+//   })
+//   .then((value) => {
+//     console.log(value);
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   });
+// async function fetchAllData() {
+//   try {
+//     let data = (await fetchData()).toLowerCase();
+//     console.log(data);
+//   } catch (error) {
+//     console.log(error.toLowerCase());
+//   }
+// }
+// fetchAllData();
+
+function fetchPostData() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("Post Data Fetched");
+    }, 2000);
+  });
 }
-console.log(outer());
+function fetchCommentData() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("Comment Data Fetched");
+    }, 3000);
+  });
+}
+
+async function getBlogData() {
+  try {
+    console.log("Fetching Blog data....");
+    // const postData = await fetchPostData();
+    // const commentData = await fetchCommentData();
+    const [postData, commentData] = await Promise.all([
+      fetchPostData(),
+      fetchCommentData(),
+    ]);
+    console.log(postData);
+    console.log(commentData);
+  } catch (error) {
+    console.error("Error fetching data: ", error);
+  }
+}
+getBlogData();
