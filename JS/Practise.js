@@ -110,34 +110,111 @@
 // }
 // fetchAllData();
 
-function fetchPostData() {
-  return new Promise((resolve) => {
+// function fetchPostData() {
+//   return new Promise((resolve) => {
+//     setTimeout(() => {
+//       resolve("Post Data Fetched");
+//     }, 2000);
+//   });
+// }
+// function fetchCommentData() {
+//   return new Promise((resolve) => {
+//     setTimeout(() => {
+//       resolve("Comment Data Fetched");
+//     }, 3000);
+//   });
+// }
+
+// async function getBlogData() {
+//   try {
+//     console.log("Fetching Blog data....");
+//     // const postData = await fetchPostData();
+//     // const commentData = await fetchCommentData();
+//     const [postData, commentData] = await Promise.all([
+//       fetchPostData(),
+//       fetchCommentData(),
+//     ]);
+//     console.log(postData);
+//     console.log(commentData);
+//   } catch (error) {
+//     console.error("Error fetching data: ", error);
+//   }
+// }
+// getBlogData();
+
+// async function getUserData(userId) {
+//   // Write your code here
+//   try {
+//     // Simulated API calls
+//   const fetchProfile = id => new Promise(resolve =>
+//     setTimeout(() => resolve({ id, name: "John" }), 100));
+//   const fetchPosts = id => new Promise(resolve =>
+//     setTimeout(() => resolve([{ id: 1, title: "Post 1" }]), 100));
+//   const fetchComments = postId => new Promise(resolve =>
+//     setTimeout(() => resolve([{ id: 1, text: "Comment 1" }]), 100));
+//     const user = await fetchProfile(userId)
+//   } catch (error) {
+
+//   }
+
+// }
+
+/*
+   Create an async function that simulates fetching user data:
+      1. First fetch user profile (simulate delay)
+      2. Then fetch user's posts (simulate delay)
+      3. Finally fetch post comments (simulate delay)
+      
+      Handle errors appropriately using try/catch.
+      
+      Example:
+      getUserData(1).then(data => console.log(data))
+      // Should return { user: {...}, posts: [...], comments: [...] }
+
+
+      async function getUserData(userId) {
+  // Simulated API calls
+  const fetchProfile = id => new Promise(resolve => 
+    setTimeout(() => resolve({ id, name: "John" }), 100));
+  const fetchPosts = id => new Promise(resolve => 
+    setTimeout(() => resolve([{ id: 1, title: "Post 1" }]), 100));
+  const fetchComments = postId => new Promise(resolve => 
+    setTimeout(() => resolve([{ id: 1, text: "Comment 1" }]), 100));
+
+  // Write your code here
+}
+*/
+// Simulated API calls
+function fetchProfile(id) {
+  return new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve("Post Data Fetched");
+      resolve({ id, name: "John" });
     }, 2000);
   });
 }
-function fetchCommentData() {
-  return new Promise((resolve) => {
+function fetchPost(id) {
+  return new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve("Comment Data Fetched");
-    }, 3000);
+      resolve([{ id: 1, title: "Post 1" }]);
+    });
   });
 }
 
-async function getBlogData() {
+function fetchComments(postId) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve([{ id: 1, title: "Post 1 " }]);
+    });
+  });
+}
+async function getUserData(userId) {
   try {
-    console.log("Fetching Blog data....");
-    // const postData = await fetchPostData();
-    // const commentData = await fetchCommentData();
-    const [postData, commentData] = await Promise.all([
-      fetchPostData(),
-      fetchCommentData(),
-    ]);
-    console.log(postData);
-    console.log(commentData);
+    const user = await fetchProfile(userId);
+    const post = await fetchPost(user.id);
+    const comment = await fetchComments(post[0].id);
+    return { user, post, comment };
   } catch (error) {
-    console.error("Error fetching data: ", error);
+    console.error("Error Fetching Data: ", error);
   }
 }
-getBlogData();
+getUserData(1).then(data => console.log(data))
