@@ -1,7 +1,16 @@
 const fs = require("fs");
 const filePath = "./tasks.json";
 
-function addTask(task) {}
+const loadTask = () => {
+  try {
+    const dataBuffer = fs.readFileSync(filePath);
+    const dataJson = dataBuffer.toString();
+    return JSON.parse(dataJson);
+  } catch (error) {
+    return [];
+  }
+};
+const addTask = (task) => {};
 
 const command = process.argv[2];
 const argument = process.argv[3];
