@@ -70,13 +70,45 @@
 // // const sampleArr = numsArr.concat(jumpArr);
 // // console.log(sampleArr.join());
 
-const numsArr = [1, 2, 3, 4, 5, 6, 7];
-console.log("A", numsArr);
-const n1 = numsArr.slice(1, 3);
-console.log(n1);
-console.log("B", numsArr);
-const n2 = numsArr.splice(1, 3);
-console.log(n2);
-console.log("C", numsArr);
+// const numsArr = [1, 2, 3, 4, 5, 6, 7];
+// console.log("A", numsArr);
+// const n1 = numsArr.slice(1, 3);
+// console.log(n1);
+// console.log("B", numsArr);
+// const n2 = numsArr.splice(1, 3);
+// console.log(n2);
+// console.log("C", numsArr);
 
-// console.log(process.stdout.columns)
+// console.log(Array.from("Rayyan"));
+// console.log(Array.from({ name: "Rayyan" }));
+
+// const sample = "rayyan";
+// console.log(typeof sample);
+
+// let score1 = 100;
+// let score2 = 200;
+// let score3 = 300;
+// console.log(Array.of(score1, score2, score3));
+
+const jsUser = {
+  name: "Rayyan",
+  "full name": "Syed rayyanul Haque",
+  age: 21,
+  location: "jaipur",
+  email: "abc@sample.com",
+  isLoggedIn: false,
+  lastLoginDays: ["wednesday", "friday"],
+};
+//console.log(jsUser.lastLoginDays);
+// console.log(jsUser.email);
+// console.log(jsUser["email"]);
+// console.log(jsUser["full name"]);
+
+jsUser.greetings = function () {
+  return "sup js user";
+};
+jsUser.greetingsTwo = function () {
+  return `Sup js user,${this.name}`;
+};
+console.log(jsUser.greetings());
+console.log(jsUser.greetingsTwo());
