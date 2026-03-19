@@ -104,11 +104,61 @@ const jsUser = {
 // console.log(jsUser["email"]);
 // console.log(jsUser["full name"]);
 
-jsUser.greetings = function () {
-  return "sup js user";
+// jsUser.greetings = function () {
+//   return "sup js user";
+// };
+// jsUser.greetingsTwo = function () {
+//   return `Sup js user,${this.name}`;
+// };
+// console.log(jsUser.greetings());
+// console.log(jsUser.greetingsTwo());
+
+// const tinderUser = new Object();
+const tinderUser = {};
+tinderUser.id = "123hub";
+tinderUser.name = "Rayyan";
+tinderUser.age = 21;
+tinderUser.email = "rayhq";
+tinderUser.isLoggedIn = "false";
+// console.log(tinderUser);
+
+const sampleUser = {
+  name: "dumbo",
+  age: "21",
+  fullName: {
+    firstName: "syed",
+    lastName: {
+      middleName: "rayyanul",
+      surname: "Haque",
+    },
+  },
+  sampleData: ["23", "er", "34"],
 };
-jsUser.greetingsTwo = function () {
-  return `Sup js user,${this.name}`;
-};
-console.log(jsUser.greetings());
-console.log(jsUser.greetingsTwo());
+
+//console.log(sampleUser.fullName.lastName.surname);
+//console.log(sampleUser.sampleData[1]);
+const obj1 = { 1: "a", 2: "b" };
+const obj2 = { 3: "c", 4: "d" };
+//const obj3 = { obj1, obj2 };
+
+// const obj3 = Object.assign({}, obj1, obj2);
+const obj3 = { ...obj1, ...obj2 };
+
+//console.log(obj3);
+
+const Users = [
+  {
+    id: 1,
+    email: "abc@bmn",
+  },
+  {
+    id: 2,
+    email: "sample@mscr",
+  },
+];
+
+// console.log(Users[1].email);
+// console.log(tinderUser);
+console.log(Object.keys(tinderUser));
+console.log(Object.values(tinderUser));
+console.log(Object.entries(tinderUser));
