@@ -1,74 +1,74 @@
-// // // let score = "34";
+// let score = "34";
 
-// // // console.log(typeof score);
-// // // console.log(typeof (score));
+// console.log(typeof score);
+// console.log(typeof (score));
 
-// // // let valueInNumber = Number(score)
-// // // console.log(typeof valueInNumber);
+// let valueInNumber = Number(score)
+// console.log(typeof valueInNumber);
 
-// // // let num = 33;
-// // // let stringNum = String(num);
-// // // console.log(stringNum);
-// // // console.log(typeof stringNum);
+// let num = 33;
+// let stringNum = String(num);
+// console.log(stringNum);
+// console.log(typeof stringNum);
 
-// // const name = "Rayyan";
-// // const repoCount = 50;
+// const name = "Rayyan";
+// const repoCount = 50;
 
-// // // console.log(name + repoCount);
-// // // console.log(`My name is ${name} nd my repo count is ${repoCount}`);
+// console.log(name + repoCount);
+// console.log(`My name is ${name} nd my repo count is ${repoCount}`);
 
-// // const gameName = new String("hitesh-hc");
-// // console.log(gameName[0]);
-// // console.log(gameName.__proto__);
+// const gameName = new String("hitesh-hc");
+// console.log(gameName[0]);
+// console.log(gameName.__proto__);
 
-// // console.log(gameName.length);
-// // console.log(gameName.toUpperCase());
-// // console.log(gameName.charAt(2));
-// // console.log(gameName.indexOf("o"));
+// console.log(gameName.length);
+// console.log(gameName.toUpperCase());
+// console.log(gameName.charAt(2));
+// console.log(gameName.indexOf("o"));
 
-// // const newString = gameName.substring(0, 4);
-// // console.log(newString);
+// const newString = gameName.substring(0, 4);
+// console.log(newString);
 
-// // const gameName1 = new String("hitesh-hc");
-// // const anotherString = gameName.slice(-8, 4);
-// // console.log(anotherString);
-// // const newStringoNE = "     Rayyan     "
-// // console.log(newStringoNE);
-// // console.log(newStringoNE.trim());
+// const gameName1 = new String("hitesh-hc");
+// const anotherString = gameName.slice(-8, 4);
+// console.log(anotherString);
+// const newStringoNE = "     Rayyan     "
+// console.log(newStringoNE);
+// console.log(newStringoNE.trim());
 // const url = "http://hitesh.com/hitesh%20choudhary";
-// // console.log(url.replace('%20','-'))
-// // console.log(url.includes("hites%20h"));
+// console.log(url.replace('%20','-'))
+// console.log(url.includes("hites%20h"));
 
 // const gameName = new String("d_off_season");
-// // console.log(gameName.split("_"));
+// console.log(gameName.split("_"));
 
-// // const myArr = [1, 3, "hello", true];
-// // const numsArray = [1, 2, 3, 4, 5, 6];
-// // console.log(numsArray);
+// const myArr = [1, 3, "hello", true];
+// const numsArray = [1, 2, 3, 4, 5, 6];
+// console.log(numsArray);
 
-// // const myHeroes = ["ironman", "superman", "hulk"];
-// // const myArr2 = new Array(1, 2, 23, 4, 5);
+// const myHeroes = ["ironman", "superman", "hulk"];
+// const myArr2 = new Array(1, 2, 23, 4, 5);
 
-// // console.log(myArr2[2]);
+// console.log(myArr2[2]);
 
-// // numsArray.push(7);
-// // numsArray.push(8);
-// // numsArray.push(9);
-// // numsArray.pop();
-// // console.log(numsArray);
+// numsArray.push(7);
+// numsArray.push(8);
+// numsArray.push(9);
+// numsArray.pop();
+// console.log(numsArray);
 
-// // numsArray.unshift(456); //adds to the starting
-// // console.log(numsArray);
-// // numsArray.shift(); //remove from the start
-// // console.log(numsArray);
+// numsArray.unshift(456); //adds to the starting
+// console.log(numsArray);
+// numsArray.shift(); //remove from the start
+// console.log(numsArray);
 
-// // const newArr = numsArr.join();
-// // console.log(numsArr);
-// // console.log(newArr);
+// const newArr = numsArr.join();
+// console.log(numsArr);
+// console.log(newArr);
 
-// // const jumpArr = ["p", "q", "r", "s"];
-// // const sampleArr = numsArr.concat(jumpArr);
-// // console.log(sampleArr.join());
+// const jumpArr = ["p", "q", "r", "s"];
+// const sampleArr = numsArr.concat(jumpArr);
+// console.log(sampleArr.join());
 
 // const numsArr = [1, 2, 3, 4, 5, 6, 7];
 // console.log("A", numsArr);
@@ -159,6 +159,37 @@ const Users = [
 
 // console.log(Users[1].email);
 // console.log(tinderUser);
-console.log(Object.keys(tinderUser));
-console.log(Object.values(tinderUser));
-console.log(Object.entries(tinderUser));
+// console.log(Object.keys(tinderUser));
+// console.log(Object.values(tinderUser));
+//console.log(Object.entries(tinderUser));
+
+// const repo = {
+//   repoName: "ai project",
+//   repoCount: 21,
+//   repoussage: "weeekly",
+// };
+
+// const { repoName: put, repoCount, repoussage: tuf } = repo;
+// console.log(cum);
+// console.log(tuf);
+
+// function sayMyName() {
+//   console.log("R");
+//   console.log("A");
+//   console.log("Y");
+//   console.log("Y");
+//   console.log("A");
+//   console.log("N");
+// }
+// sayMyName();
+
+function addTwoNums(n1, n2) {
+  // console.log(n1 + n2);
+
+  // let result = n1 + n2;
+  // return result;
+  return n1 + n2;
+}
+
+const result = addTwoNums(2, 4);
+console.log("result:", result);
