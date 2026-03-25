@@ -17,6 +17,7 @@ if (true) {
 // console.log(b);
 // console.log(c);
 
+//+++++++++++++CLOSURES+++++++++++++++++++++
 function one() {
   const username = "John";
   function two() {
@@ -39,7 +40,7 @@ if (true) {
 }
 // console.log(username);
 
-//++++++++INTERESTING+++++++++++++
+//++++++++INTERESTING+++++++++++++(HOISTING)
 console.log(addone(5));
 function addone(num) {
   return num + 1;

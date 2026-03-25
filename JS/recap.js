@@ -192,4 +192,70 @@ function addTwoNums(n1, n2) {
 }
 
 const result = addTwoNums(2, 4);
-console.log("result:", result);
+// console.log("result:", result);
+
+function loginUser(username = "sam") {
+  if (!username) {
+    return "Please enter a username!";
+  }
+  return `${username} just logged in!`;
+}
+// console.log(loginUser("s"));
+
+function calculateCart(...num1) {
+  return num1;
+}
+//console.log(calculateCart(1, 2, 3, 4));
+
+const user = {
+  username: "ray_hq3",
+  id: 21,
+};
+const supplier = {
+  username: "janta_trading123",
+  id: 32,
+};
+function handleObj(anyobject) {
+  return `Customer is ${anyobject.username} and ID is ${anyobject.id}`;
+}
+
+//console.log(handleObj(supplier));
+//console.log(handleObj(user));
+// console.log(handleObj({ username: "epicCrate45", id: 4324234 }));
+
+const myArray = [233, 433, 543, 5656, 7, 565, 34];
+function returnSecondValue(anyArray) {
+  return anyArray[1];
+}
+// console.log(returnSecondValue(myArray));
+// console.log(returnSecondValue([1111, 2222, 3333, 4444, 5555, 6666]));
+
+if (true) {
+  let a = 10;
+  const b = 20;
+  var c = 30;
+}
+// console.log(a);
+// console.log(b);
+// console.log(c);
+
+function one() {
+  const username = "rbo21";
+  function two() {
+    // console.log(username);
+    const website = "running";
+  }
+  // console.log(website);
+  two();
+}
+one();
+
+console.log(addOne(2));
+function addOne(num) {
+  return num + 1;
+}
+
+addTwo(5);
+const addTwo = function (num) {
+  return num + 2;
+};
