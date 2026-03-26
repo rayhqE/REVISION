@@ -250,12 +250,50 @@ function one() {
 }
 one();
 
-console.log(addOne(2));
+// console.log(addOne(2));
 function addOne(num) {
   return num + 1;
 }
 
-addTwo(5);
+// addTwo(5);
 const addTwo = function (num) {
   return num + 2;
 };
+
+const user1 = {
+  username: "rayyyan",
+  price: 999,
+
+  welcomeMessage: function () {
+    console.log(`${this.username}, welcome to the website`);
+    // console.log(this);
+  },
+};
+
+// user1.welcomeMessage();
+// user1.username = "tagore";
+// user1.welcomeMessage();
+
+function chai() {
+  let username = "rayyan";
+  // console.log(this.username);
+}
+chai();
+
+//Arrow Fucntions
+const sample = () => {
+  let userName = "rayyan";
+  // console.log(this.userName);
+};
+// sample();
+
+// const addNums = (n1, n2) => {
+//   return n1 + n2;
+// };
+
+const addNums = (n1, n2) => n1 + n2;
+const arrowFun = (n1, m2) => ({ usernmae: "rayyan" });
+//console.log(arrowFun(3, 2));
+
+const myArrayyy = [1, 2, 3, 4, 5];
+myArrayyy.forEach(() => {});
