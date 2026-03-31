@@ -297,3 +297,108 @@ const arrowFun = (n1, m2) => ({ usernmae: "rayyan" });
 
 const myArrayyy = [1, 2, 3, 4, 5];
 myArrayyy.forEach(() => {});
+
+//??????????????????IIFE?????????
+
+// (function chai() {
+//   console.log("sup chai");
+// })();
+// ((drinker, drink) => {
+//   console.log(`${drinker} is drinking ${drink}`);
+// })("rayyan", "coke");
+
+const temperature = 41;
+if (temperature === 41) {
+  // console.log("temp less than 50");
+} else {
+  //console.log("temp is greater than 50");
+}
+
+// const score = 1000;
+// if (score > 500) {
+//   console.log("greater than 500,Grade-A");
+// } else if (score > 350) {
+//   console.log("greater than 350,Grade-B");
+// } else if (score > 250) {
+//   console.log("greater than 250,Grade-C");
+//}
+
+// const month = "sdsd";
+// switch (month) {
+//   case "jan":
+//     console.log("january");
+
+//     break;
+//   case "feb":
+//     console.log("febuarary");
+
+//     break;
+
+//   default:
+//     console.log("no maatch");
+
+//     break;
+// }
+
+// condition ? true : fasle;
+//const iceTea = 100;
+//iceTea >= 80 ? console.log("greater than 80") : console.log("less than 80");
+
+for (let i = 0; i < 10; i++) {
+  const element = i;
+  // console.log(element);
+}
+
+for (let i = 1; i <= 10; i++) {
+  // console.log(`Outer loop value:${i}`);
+  for (let j = 1; j <= 10; j++) {
+    // console.log(`Inner loop value:${j}, Outer loop value:${i} `);
+    // console.log(i + " * " + j + " = " + i * j);
+  }
+}
+
+const myArray1 = ["flash", "superman", "batman"];
+// console.log(myArray1.length);
+
+for (let index = 0; index < myArray1.length; index++) {
+  const element = myArray1[index];
+  // console.log(element);
+}
+
+for (let i = 0; i <= 20; i++) {
+  if (i == 5) break;
+  // console.log(i);
+}
+for (let i = 1; i <= 20; i++) {
+  if (i === 5) continue;
+  // console.log(i);
+}
+
+let i = 0;
+while (i <= 20) {
+  // console.log(`Value of i is ${i}`);
+  i = i + 2;
+}
+
+const myArRayy = ["superman", "batman", "flash", "spiderman"];
+let arr = 0;
+while (arr < myArRayy.length) {
+  //console.log(`Value is ${myArRayy[arr]}`);
+  arr++;
+}
+
+let score = 11;
+do {
+  // console.log(`score is ${score}`);
+  score++;
+} while (score <= 10);
+
+/* 1. Write a 'for loop that loops through the array ["green tea", "black tea", "chai", "oolong tea"] and stops the loop when it finds "chai"" Store all teas before "chai" in a new array named selectedTeas`.*/
+
+const sampleArray = ["green tea", "black tea", "chai", "oolong tea"];
+const selectedTeas = [];
+for (let i = 0; i < sampleArray.length; i++) {
+  if (sampleArray[i] === "chai") break;
+  selectedTeas.push(sampleArray[i]);
+}
+console.log(selectedTeas);
