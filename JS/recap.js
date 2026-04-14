@@ -401,4 +401,97 @@ for (let i = 0; i < sampleArray.length; i++) {
   if (sampleArray[i] === "chai") break;
   selectedTeas.push(sampleArray[i]);
 }
-console.log(selectedTeas);
+// console.log(selectedTeas);
+
+let internet = 0;
+while (internet <= 20) {
+  // console.log(internet);
+  internet++;
+}
+let straw = 0;
+do {
+  // console.log(straw);
+  straw++;
+} while (straw <= 20);
+
+const arrr = [1, 2, 3, 4, 5, 6];
+for (const val of arrr) {
+  // console.log(val);
+}
+
+const greetings = "Hello World!";
+for (const greet of greetings) {
+  if (greet == " ") continue;
+  // console.log(`Each char is ${greet}`);
+}
+
+const myObject = {
+  js: "javascript",
+  py: "Python",
+  rb: "ruby",
+  swift: "swift",
+};
+
+for (const key in myObject) {
+  // console.log(key);
+  // console.log(myObject[key]);
+  // console.log(`${key} is shortcut for ${myObject[key]}`);
+}
+
+const hero = ["2323", "34343", "34343", "44545", "334343"];
+// for (const i of hero) {
+//   console.log(i);
+// }
+// for (const key in hero) {
+//   console.log(hero[key]);
+// }
+
+const samosa = {
+  perice: 45,
+  taste: "mid",
+  location: "raju ka dhaba",
+};
+for (const key in samosa) {
+  // console.log(key);
+  // console.log(samosa[key]);
+}
+
+const coding = ["js", "ruby", "wert", "p"];
+coding.forEach(function (item) {
+  // console.log(item);
+});
+
+coding.forEach((item) => {
+  // console.log(item);
+});
+
+// coding.forEach((item) => console.log(item));
+
+function printMe(item) {
+  // console.log(item);
+}
+coding.forEach(printMe);
+
+coding.forEach((item, index, arr) => {
+  // console.log(item, index, arr);
+});
+
+const myCoding = [
+  {
+    langName: "Javascript",
+    langCode: "js",
+  },
+  {
+    langName: "python",
+    langCode: "py",
+  },
+  {
+    langName: "Java",
+    langCode: "java",
+  },
+];
+
+myCoding.forEach((item) => {
+  console.log(item.langName);
+  console.log(item.langCode);
+});
