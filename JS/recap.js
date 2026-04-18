@@ -492,6 +492,98 @@ const myCoding = [
 ];
 
 myCoding.forEach((item) => {
-  console.log(item.langName);
-  console.log(item.langCode);
+  // console.log(item.langName);
+  // console.log(item.langCode);
 });
+
+function sumOfN(n) {
+  let sum = 0;
+  for (let i = 1; i <= n; i++) {
+    sum = sum + i;
+  }
+  return sum;
+}
+
+function printMultiplicationTable(n) {
+  const result = [];
+  for (let i = 1; i <= 10; i++) {
+    result.push(`${n} * ${i} = ${n * i}`);
+  }
+  return result;
+}
+
+function countVowels(str) {
+  let count = 0;
+  let vowels = "aeiouAEIOU";
+  for (let i = 0; i < str.length; i++) {
+    if (vowels.includes(str[i])) {
+      count++;
+    }
+  }
+  return count;
+}
+
+const squareNumbers = (arr) => {
+  return arr.map((item) => item * item);
+};
+
+const filterEvenNumbers = (arr) => {
+  return arr.filter((item) => item % 2 === 0);
+};
+
+const sumPositiveNumbers = (arr) => {
+  return arr.filter((item) => item > 0).reduce((acc, item) => acc + item, 0);
+};
+
+const getNames = (arr) => {
+  return arr.map((item) => item.name);
+};
+
+const findLongestWord = (arr) => {
+  return arr.reduce((longest, word) => {
+    if (word.length > longest.length) {
+      return word;
+    }
+    return longest;
+  }, "");
+};
+
+const ryte = {
+  lion: "name",
+  fory: "killer",
+};
+// ryte.forEach((item) => {
+//   // console.log(item);
+// });
+/*
+7. Write a `forEach` loop that iterates through the array 
+["earl grey", "green tea", "chai", "oolong tea"].
+Stop the loop when "chai" is found, and store all previous tea types in an array
+named `availableTeas`.
+*/
+
+const loose = ["earl grey", "green tea", "chai", "oolong tea", "pipe"];
+const availableTeas = [];
+loose.forEach((i) => {
+  if (i == "chai") return;
+  availableTeas.push(i);
+});
+// console.log(availableTeas);
+
+const tinyNUms = [2, 5, 7, 9];
+let doubledNums = [];
+// for (i = 0; i < tinyNUms.length; i++) {
+//   if (tinyNUms[i] === 7) continue;
+//   let jump = tinyNUms[i] * 2;
+//   doubledNums.push(jump);
+// }
+// for (const i of tinyNUms) {
+//   if (i ===7) continue;
+//   doubledNums.push(i*2)
+
+// }
+tinyNUms.forEach((i) => {
+  if (i === 7) return;
+  doubledNums.push(i * 2);
+});
+console.log(doubledNums);
