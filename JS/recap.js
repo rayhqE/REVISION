@@ -586,4 +586,170 @@ tinyNUms.forEach((i) => {
   if (i === 7) return;
   doubledNums.push(i * 2);
 });
-console.log(doubledNums);
+// console.log(doubledNums);
+
+function makeTea(typeOfTea) {
+  return `Making ${typeOfTea}`;
+}
+
+const teaOrder = makeTea("green Tea");
+// console.log(teaOrder);
+// +++++++++++++++++++++++++++++++++++++++
+
+function orderTea(teaType) {
+  function confirmOrder() {
+    return `Order confirmed for ${teaType}`;
+  }
+  return confirmOrder();
+}
+// console.log(orderTea("home"));
+//+++++++++++++++++3rd+++++
+const calculateTotal = (price, quantity) => {
+  const totalCost = price * quantity;
+  return totalCost;
+};
+// console.log(calculateTotal(20, 2));
+//+++++++4th+++++++
+function makeTea(i) {
+  return i;
+}
+function processTeaOrder(makeTea) {
+  return makeTea("chicken sandwich");
+}
+// console.log(processTeaOrder(makeTea));
+//++++++++++++5th++++++++
+function createTeaMaker() {
+  return function (teaType) {
+    return `Making ${teaType}`;
+  };
+}
+const teaMaker = createTeaMaker();
+// console.log(teaMaker("green tea"));
+
+// (() => {})();
+
+// const mmNNums = [1, 3, 4, 5, 6, 7, 7, 2];
+// console.log(
+//   mmNNums.filter((i) => {
+//     return i >= 4;
+//   }),
+// );
+
+const jumpug = [45, 3, 7, 2, 8, 4, 2, 9];
+const kite = [];
+// jumpug.filter((i) => console.log(i));
+
+jumpug.forEach((i) => {
+  if (i > 4) {
+    kite.push(i);
+  }
+});
+// console.log(kite);
+
+const books = [
+  { title: "Book One", genre: "Fiction", publish: 1981, edition: 2004 },
+  { title: "Book Two", genre: "Non-Fiction", publish: 1992, edition: 2008 },
+  { title: "Book Three", genre: "History", publish: 1999, edition: 2007 },
+  { title: "Book Four", genre: "Non-Fiction", publish: 1989, edition: 2010 },
+  { title: "Book Five", genre: "Science", publish: 2009, edition: 2014 },
+  { title: "Book Six", genre: "Fiction", publish: 1987, edition: 2010 },
+  { title: "Book Seven", genre: "History", publish: 1986, edition: 1996 },
+  { title: "Book Eight", genre: "Science", publish: 2011, edition: 2016 },
+  { title: "Book Nine", genre: "Non-Fiction", publish: 1981, edition: 1989 },
+];
+
+// console.log(books.filter((b) => b.publish > 1989 && b.genre === "Science"));
+
+const typo = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// console.log(
+//   typo.map((i) => {
+//     if (i > 4) {
+//       return i + 10;
+//     }
+//     return i;
+//   }),
+// );
+
+// let loops = [];
+// typo.forEach((i) => {
+//   loops.push(i + 10);
+// });
+// console.log(typo);
+// console.log(loops);
+
+const pool = [122, 343, 454, 323, 88, 888, 9094, 3943, 56];
+// console.log(pool.filter((i) => i > 1000));
+// console.log(pool.map((i) => i * 10).map((i) => i + 1).filter((i)=>i>10000));
+
+// console.log(pool.map((i)=>i*10).map((i)=>i+1).filter((i)=>i>1000))
+
+const yeezy = [1, 2, 3];
+// console.log(
+//   yeezy.reduce((acc, currVal) => {
+//     console.log(`acc:${acc} and current value:${currVal}`);
+//     return acc + currVal;
+//   }, 0),
+// );
+
+const shoppingCart = [
+  {
+    course: "js",
+    price: 3999,
+  },
+  {
+    course: "python",
+    price: 3559,
+  },
+  {
+    course: "java",
+    price: 9999,
+  },
+  {
+    course: "aiml",
+    price: 4999,
+  },
+];
+
+console.log(shoppingCart.reduce((acc, item) => acc + item.price, 0));
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++
+const squareNumbers = (arr) => {
+  return arr.map((item) => item * item);
+};
+
+const filterEvenNumbers = (arr) => {
+  return arr.filter((item) => item % 2 === 0);
+};
+
+const sumPositiveNumbers = (arr) => {
+  return arr.filter((item) => item > 0).reduce((acc, item) => acc + item, 0);
+};
+
+const getNames = (arr) => {
+  return arr.map((item) => item.name);
+};
+
+const findLongestWord = (arr) => {
+  return arr.reduce((longest, word) => {
+    if (word.length > longest.length) {
+      return word;
+    }
+    return longest;
+  }, "");
+};
+
+//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+const person = {
+  name: "Hitesh",
+  age: 19.5,
+  introduce: function () {
+    return `Hi, my name is ${this.name} and I am ${this.age} years old`;
+  },
+};
+
+function outer() {
+  function inner() {
+    return `Inner function called`;
+  }
+  return inner();
+}
