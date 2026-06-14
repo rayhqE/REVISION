@@ -22,7 +22,7 @@ const server = http.createServer((req, res) => {
     res.write("</html>");
     res.end();
   } else {
-    res.write("<body><h1>Chutiye</h1></body>");
+    res.write("<body><h1>Random Page</h1></body>");
     res.write("</html>");
     res.end();
   }
