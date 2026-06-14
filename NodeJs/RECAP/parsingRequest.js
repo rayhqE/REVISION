@@ -26,8 +26,14 @@ const server = http.createServer((req, res) => {
     req.url.toLowerCase() === "/submit-details" &&
     req.method === "POST"
   ) {
+    const body = [];
     req.on("data", (chunk) => {
       console.log(chunk);
+      body.push(chunk);
+    });
+    req.on("end", () => {
+      const fullBody = Buffer.concat(body).toString();
+      console.log(fullBody);
     });
 
     fs.writeFileSync("user.txt", "Rayyan");
