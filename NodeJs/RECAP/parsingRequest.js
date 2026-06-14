@@ -1,5 +1,6 @@
 const http = require("http");
 const fs = require("fs");
+const { json } = require("stream/consumers");
 const server = http.createServer((req, res) => {
   console.log(req.url, req.method);
   if (req.url === "/") {
@@ -34,9 +35,14 @@ const server = http.createServer((req, res) => {
     req.on("end", () => {
       const fullBody = Buffer.concat(body).toString();
       console.log(fullBody);
+      const params = new URLSearchParams(fullBody);
+      // const username = params.get("username");
+      // const gender = params.get("gender");
+      const bodyObject = Object.fromEntries(params);
+      // console.log(bodyObject.username);
+      // console.log(bodyObject.gender);
+      fs.writeFileSync("user.txt", JSON.stringify(bodyObject));
     });
-
-    fs.writeFileSync("user.txt", "Rayyan");
     res.setHeader("Location", "/");
     res.statusCode = 302;
     return res.end();
