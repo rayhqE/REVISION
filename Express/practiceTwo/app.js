@@ -14,7 +14,7 @@ app.use(userRouter);
 app.use(adminRouter);
 
 app.use((req, res, next) => {
-  res.sendFile(path.join(rootDir, "views", "404.html"));
+  res.status(404).sendFile(path.join(rootDir, "views", "404.html"));
 });
 
 const PORT = 3001;
