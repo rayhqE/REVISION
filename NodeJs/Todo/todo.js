@@ -65,12 +65,16 @@ const removeTask = async (task) => {
 const command = process.argv[2];
 const argument = process.argv[3];
 
-if (command === "add") {
-  addTask(argument);
-} else if (command === "list") {
-  listTask();
-} else if (command === "remove") {
-  removeTask(argument);
-} else {
-  console.log("Command not found");
-}
+(async () => {
+  if (command === "add") {
+    await addTask(argument);
+  } else if (command === "list") {
+    await listTask();
+  } else if (command === "remove") {
+    await removeTask(argument);
+  } else {
+    console.log("Command not found");
+  }
+
+  mongoose.connection.close();
+})();
