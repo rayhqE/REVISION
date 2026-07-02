@@ -1,3 +1,4 @@
+require("dotenv").config();
 const mongoose = require("mongoose");
 // const fs = require("fs");
 const { type } = require("os");
@@ -6,9 +7,7 @@ const { error } = require("console");
 
 //Connection
 mongoose
-  .connect(
-    "mongodb://root:Rust1234@ac-85mr5f1-shard-00-00.qikfhs5.mongodb.net:27017,ac-85mr5f1-shard-00-01.qikfhs5.mongodb.net:27017,ac-85mr5f1-shard-00-02.qikfhs5.mongodb.net:27017/todo?ssl=true&replicaSet=atlas-lnwgrs-shard-0&authSource=admin&appName=Cluster0",
-  )
+  .connect(process.env.MONGO_URI)
   // ("mongodb://127.0.0.1:27017/my-todo-list")
   .then(() => console.log("MongoDB Connected"))
   .catch((error) => console.log("Mongo Error", error));
